@@ -156,7 +156,8 @@ public class ScrapeFlights {
 //        System.out.println("------FLIGHT TYPES LIST-----");
         for (WebElement element : flightCompanies) {
 //            System.out.println(element.getText());
-            flightCompaniesList.add(element.getText().split("\\s", 2)[0]);
+//            flightCompaniesList.add(element.getText().split("\\s", 2)[0]);
+            flightCompaniesList.add(element.getText());
         }
 
         // Print and store arriving flight times

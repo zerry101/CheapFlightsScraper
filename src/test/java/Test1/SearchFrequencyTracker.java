@@ -1,4 +1,4 @@
-package org.example;
+package Test1;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,28 +9,28 @@ import java.util.Scanner;
 import java.util.Map.Entry;
 
 public class SearchFrequencyTracker {
-    private static Map<String, Integer> searchFrequency = new HashMap<>();
+//    private static Map<String, Integer> searchFrequency = new HashMap<>();
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input;
-
-        System.out.println("Enter your search queries (type 'exit' to quit and display top searches):");
-
-        while (true) {
-            System.out.print("Search Query: ");
-            input = scanner.nextLine();
-
-            if (input.equalsIgnoreCase("exit")) {
-                break;
-            }
-
-            processSearchQuery(input, searchFrequency);
-        }
-
-        // Display the top searches and generate CSV file
-        displayTopSearches(searchFrequency, 10); // Display top 10 searches
-        scanner.close();
+//        Scanner scanner = new Scanner(System.in);
+//        String input;
+//
+//        System.out.println("Enter your search queries (type 'exit' to quit and display top searches):");
+//
+//        while (true) {
+//            System.out.print("Search Query: ");
+//            input = scanner.nextLine();
+//
+//            if (input.equalsIgnoreCase("exit")) {
+//                break;
+//            }
+//
+//            processSearchQuery(input, searchFrequency);
+//        }
+//
+//        // Display the top searches and generate CSV file
+//        displayTopSearches(searchFrequency, 10); // Display top 10 searches
+//        scanner.close();
     }
 
     public static void processSearchQuery(String query, Map<String, Integer> searchFrequency) {

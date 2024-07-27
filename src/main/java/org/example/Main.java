@@ -129,12 +129,10 @@ public class Main {
     private static List<String> promptForSites(Scanner scanner) {
         List<String> selectedSites = new ArrayList<>();
         Map<Integer, String> siteOptions = new HashMap<>();
-        siteOptions.put(1, "Expedia");
-        siteOptions.put(2, "Travelocity");
+
         siteOptions.put(3, "CheapFlights");
-        siteOptions.put(4, "Air Canada");
-        siteOptions.put(5, "Kayak");
-        siteOptions.put(6, "Momondo");
+
+
 
         System.out.println("\nPlease choose the sites you want to scrape data from (enter numbers separated by commas):");
         for (Map.Entry<Integer, String> entry : siteOptions.entrySet()) {
@@ -166,7 +164,7 @@ public class Main {
         System.out.println("1. Cheapest flight");
         System.out.println("2. Shortest flight");
         System.out.println("3. Best flight");
-        System.out.println("4. Display flights");
+
 
         int preference = -1;
         while (preference < 1 || preference > 4) {
