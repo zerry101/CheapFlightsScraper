@@ -29,9 +29,6 @@ package Test1;
  *
  *************************************************************************/
 
-import org.checkerframework.checker.units.qual.K;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -72,8 +69,8 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
 
 // Added auto complete functionality here
-    public Map<String,Integer> autoComplete(String prefix) {
-        return autoCompleteRec(root, prefix);
+    public HashMap<String, Integer> autoComplete(String prefix) {
+        return (HashMap<String, Integer>) autoCompleteRec(root, prefix);
     }
 
     private Map<String,Integer> autoCompleteRec(Node x, String prefix) {
