@@ -16,6 +16,7 @@ public class BestFlightFinder {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
 
+
         for (String csvFile : csvFiles) {
             try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
                 String line;
@@ -42,6 +43,8 @@ public class BestFlightFinder {
                             }
                         }
                     }
+
+
                 }
             } catch (IOException e) {
                 e.printStackTrace();

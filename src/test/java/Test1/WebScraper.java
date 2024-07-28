@@ -443,7 +443,7 @@ public class WebScraper {
                             findShortestFlight(from, to, siteCSVs);
                             break;
                         case 3:
-                            BestFlightFinder.findBestFlight(from, to, siteCSVs, "United Airlines");
+                            BestFlightFinder.findBestFlight(from, to, siteCSVs, null);
                             break;
 //                        case 4:
 //                            flightOPSearch();
@@ -451,6 +451,7 @@ public class WebScraper {
 //                        case 5:
 //                            displayFlights();
 //                            break;
+
                         default:
                             System.out.println("Invalid choice.");
                             break;
