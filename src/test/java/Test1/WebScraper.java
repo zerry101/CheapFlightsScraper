@@ -780,8 +780,10 @@ public class WebScraper {
                     String arrCity = values[5].trim().toLowerCase();
 
                     if (depCity.equals(departureCity.toLowerCase()) && arrCity.equals(arrivalCity.toLowerCase())) {
-                        LocalTime departureLocalTime = convertTo24HourFormat(depTime.trim());
-                        LocalTime arrivalLocalTime = convertTo24HourFormat(arrTime.trim());
+//                        LocalTime departureLocalTime = LocalTime.parse(convertTo24HourFormat(depTime.trim()));
+//                        LocalTime arrivalLocalTime = LocalTime.parse(convertTo24HourFormat(arrTime.trim()));
+                        String departureLocalTime = convertTo24HourFormat(depTime.trim());
+                        String  arrivalLocalTime = convertTo24HourFormat(arrTime.trim());
 
                         Duration duration = calculateFlightDuration(departureLocalTime, arrivalLocalTime, arrTime.contains("+1"));
 
@@ -880,21 +882,45 @@ public class WebScraper {
         return preference;
     }
 
-    private static LocalTime convertTo24HourFormat(String time) {
-        DateTimeFormatter formatter12Hour = DateTimeFormatter.ofPattern("h:mm a");
-        DateTimeFormatter formatter24Hour = DateTimeFormatter.ofPattern("HH:mm");
+    private static String convertTo24HourFormat(String time) {
+        // Normalize the string by trimming and replacing multiple spaces with a single space
+        String normalizedTime = time.trim().replaceAll("\\s+", " ");
+//        System.out.println("Normalized time string: '" + normalizedTime + "'");
 
-        LocalTime localTime = LocalTime.parse(time.trim().replaceAll(" +", " "), formatter12Hour);
-        return LocalTime.parse(localTime.format(formatter24Hour), formatter24Hour);
+        // Split time and AM/PM part
+        String[] parts = normalizedTime.split(" ");
+        String timePart = parts[0];
+        String amPmPart = parts[1];
+
+        // Split hour and minute
+        String[] timeParts = timePart.split(":");
+        int hour = Integer.parseInt(timeParts[0]);
+        int minute = Integer.parseInt(timeParts[1]);
+
+        // Convert hour based on AM/PM
+        if (amPmPart.equalsIgnoreCase("PM") && hour != 12) {
+            hour += 12;
+        } else if (amPmPart.equalsIgnoreCase("AM") && hour == 12) {
+            hour = 0;
+        }
+
+
+
+        // Format to 24-hour time string
+        return String.format("%02d:%02d", hour, minute);
     }
 
 
+    private static Duration calculateFlightDuration(String departureTime, String arrivalTime, boolean nextDay) {
+        LocalTime depTime = LocalTime.parse(departureTime);
+        LocalTime arrTime = LocalTime.parse(arrivalTime);
 
-    private static Duration calculateFlightDuration(LocalTime departureTime, LocalTime arrivalTime, boolean nextDay) {
+        // If the arrival time is on the next day, adjust the arrival time by adding 24 hours
         if (nextDay) {
-            arrivalTime = arrivalTime.plusHours(24);
+            arrTime = arrTime.plusHours(24);
         }
-        return Duration.between(departureTime, arrivalTime);
+
+        return Duration.between(depTime, arrTime);
     }
 
 }
