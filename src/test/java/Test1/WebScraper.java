@@ -892,6 +892,7 @@ public class WebScraper {
         String timePart = parts[0];
         String amPmPart = parts[1];
 
+
         // Split hour and minute
         String[] timeParts = timePart.split(":");
         int hour = Integer.parseInt(timeParts[0]);
