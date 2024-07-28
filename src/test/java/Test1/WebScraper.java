@@ -442,9 +442,9 @@ public class WebScraper {
                         case 2:
                             findShortestFlight(from, to, siteCSVs);
                             break;
-//                        case 3:
-//                            findBestFlight();
-//                            break;
+                        case 3:
+                            BestFlightFinder.findBestFlight(from, to, siteCSVs, "United Airlines");
+                            break;
 //                        case 4:
 //                            flightOPSearch();
 //                            break;
@@ -921,7 +921,11 @@ public class WebScraper {
             arrTime = arrTime.plusHours(24);
         }
 
-        return Duration.between(depTime, arrTime);
+        return Duration.between(arrTime,depTime).abs();
+    }
+
+    private static void findBestFlight(String departureCity, String arrivalCity, List<String> csvFiles, String airline) {
+        BestFlightFinder.findBestFlight(departureCity, arrivalCity, csvFiles, airline);
     }
 
 }
