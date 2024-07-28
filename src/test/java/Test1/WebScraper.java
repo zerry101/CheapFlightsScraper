@@ -351,7 +351,7 @@ public class WebScraper {
                                 System.out.println("Did you mean " + redBlackBstTree.autoComplete(from).keySet() + " ?");
                             }
                             else{
-                                ArrayList similarWordsArray=SpellChecker.spellCheck(from);
+                                ArrayList similarWordsArray=SpellChecker.spellCheck(from,null);
 
                                 System.out.println("Did you mean "+similarWordsArray.get(1)+"?");
                             }                        }
@@ -389,7 +389,7 @@ public class WebScraper {
                                 System.out.println("Did you mean " + redBlackBstTree.autoComplete(to).keySet() + " ?");
                             }
                             else{
-                                ArrayList similarWordsArray=SpellChecker.spellCheck(to);
+                                ArrayList similarWordsArray=SpellChecker.spellCheck(to,null);
 
                                 System.out.println("Did you mean "+similarWordsArray.get(1)+"?");
                             }
@@ -437,17 +437,17 @@ public class WebScraper {
                     // Run the appropriate function based on the user's preference
                     switch (preference) {
                         case 1:
-                            findCheapestFlight(from, to, siteCSVs);
+                            findCheapestFlight(from, to, siteCSVs,"");
                             break;
                         case 2:
-                            findShortestFlight(from, to, siteCSVs);
+                            findShortestFlight(from, to, siteCSVs,"");
                             break;
                         case 3:
                             BestFlightFinder.findBestFlight(from, to, siteCSVs, null);
                             break;
-//                        case 4:
-//                            flightOPSearch();
-//                            break;
+                        case 4:
+                                flightOPSearch(from,to,siteCSVs,scanner);
+                            break;
 //                        case 5:
 //                            displayFlights();
 //                            break;
@@ -708,7 +708,7 @@ public class WebScraper {
         return Double.parseDouble(priceString.replaceAll("[^\\d.]", ""));
     }
 
-    private static void findCheapestFlight(String departureCity, String arrivalCity, List<String> siteCSVs) {
+    private static void findCheapestFlight(String departureCity, String arrivalCity, List<String> siteCSVs,String operator) {
         System.out.println("Finding the cheapest flight...");
         Flight cheapestFlight = null;
 
@@ -726,7 +726,13 @@ public class WebScraper {
                     String arrTime = values[1];
                     double price = parsePrice(values[2].trim());
 
-                    String operator = values[3];
+                    String flightOperator="";
+                    flightOperator = SpellChecker.spellCheck(operator,csvFile).toString();
+
+                    operator=flightOperator;
+
+
+
                     String depCity = values[4].trim().toLowerCase();
                     String arrCity = values[5].trim().toLowerCase();
 
@@ -757,7 +763,7 @@ public class WebScraper {
         }
     }
 
-    private static void findShortestFlight(String departureCity, String arrivalCity, List<String> siteCSVs) {
+    private static void findShortestFlight(String departureCity, String arrivalCity, List<String> siteCSVs,String operator) {
         System.out.println("Finding the shortest flight...");
         Flight shortestFlight = null;
         Duration shortestDuration = null;
@@ -776,7 +782,10 @@ public class WebScraper {
                     String arrTime = values[1];
                     double price = parsePrice(values[2].trim());
 
-                    String operator = values[3];
+                    String flightOperator="";
+                    flightOperator = values[3].toLowerCase().startsWith(operator.toLowerCase()) ? operator : values[3];
+
+
                     String depCity = values[4].trim().toLowerCase();
                     String arrCity = values[5].trim().toLowerCase();
 
@@ -928,6 +937,34 @@ public class WebScraper {
     private static void findBestFlight(String departureCity, String arrivalCity, List<String> csvFiles, String airline) {
         BestFlightFinder.findBestFlight(departureCity, arrivalCity, csvFiles, airline);
     }
+
+
+
+    private static void flightOPSearch(String departureCity, String arrivalCity, List<String> siteCSVs, Scanner scanner) {
+        System.out.println("\nEnter the flight operator name:");
+        scanner.nextLine(); // Clear the buffer
+        String operator = scanner.nextLine().trim().toLowerCase();
+
+        // Prompt user for flight preference
+        int preference = promptForFlightPreference(scanner);
+
+        // Run the appropriate function based on the user's preference and operator
+        switch (preference) {
+            case 1:
+                findCheapestFlight(departureCity, arrivalCity, siteCSVs, operator);
+                break;
+            case 2:
+                findShortestFlight(departureCity, arrivalCity, siteCSVs, operator);
+                break;
+            case 3:
+                findBestFlight(departureCity, arrivalCity, siteCSVs, operator);
+                break;
+            default:
+                System.out.println("Invalid choice.");
+                break;
+        }
+    }
+
 
 }
 

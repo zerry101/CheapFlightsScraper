@@ -111,13 +111,15 @@ public class SpellChecker {
         }
     }
 
-    public static ArrayList<String> spellCheck(String userInput) {
+    public static ArrayList<String> spellCheck(String userInput,String filePath) {
 //        System.out.println("--------EX2----------\r\n");
 //        Scanner scanner = new Scanner(System.in);
 
+        if(filePath==null){
+            filePath="D:\\CheapFlightsScraper\\Contri_Codes\\CheapFlights.csv.csv";
+        }
 
-
-        return  findSimilarWords(userInput, "D:\\CheapFlightsScraper\\Contri_Codes\\CheapFlights.csv.csv",2);
+        return  findSimilarWords(userInput, filePath,2);
 
     }
 
