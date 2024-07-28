@@ -214,8 +214,7 @@ public class WebScraper {
 
                     // Initialize ScrapeFlights object and scrape flight data
                     ScrapeFlights scrapeFlights = new ScrapeFlights(driver, type, from, to);
-                    scrapeFlights.
-                            scrapeFlights();
+                    scrapeFlights.scrapeFlights();
 
                     // Write flight data to CSV file (flight_data.csv)
 
@@ -271,7 +270,6 @@ public class WebScraper {
 
 
                         int offset = kmp.search(word);
-
 
 
                         searchFrequencyMap.put(word, searchFrequencyMap.getOrDefault(word, 0) + 1);
@@ -446,11 +444,11 @@ public class WebScraper {
                             BestFlightFinder.findBestFlight(from, to, siteCSVs, null);
                             break;
                         case 4:
-                                flightOPSearch(from,to,siteCSVs,scanner);
+                                FlightSearchUtility.flightOPSearch1(from,to,siteCSVs,scanner);
                             break;
-//                        case 5:
-//                            displayFlights();
-//                            break;
+                        case 5:
+                            displayFlights();
+                            break;
 
                         default:
                             System.out.println("Invalid choice.");
@@ -708,7 +706,7 @@ public class WebScraper {
         return Double.parseDouble(priceString.replaceAll("[^\\d.]", ""));
     }
 
-    private static void findCheapestFlight(String departureCity, String arrivalCity, List<String> siteCSVs,String operator) {
+    public static void findCheapestFlight(String departureCity, String arrivalCity, List<String> siteCSVs, String operator) {
         System.out.println("Finding the cheapest flight...");
         Flight cheapestFlight = null;
 
@@ -763,7 +761,7 @@ public class WebScraper {
         }
     }
 
-    private static void findShortestFlight(String departureCity, String arrivalCity, List<String> siteCSVs,String operator) {
+    public static void findShortestFlight(String departureCity, String arrivalCity, List<String> siteCSVs, String operator) {
         System.out.println("Finding the shortest flight...");
         Flight shortestFlight = null;
         Duration shortestDuration = null;
@@ -934,7 +932,7 @@ public class WebScraper {
         return Duration.between(arrTime,depTime).abs();
     }
 
-    private static void findBestFlight(String departureCity, String arrivalCity, List<String> csvFiles, String airline) {
+    public static void findBestFlight(String departureCity, String arrivalCity, List<String> csvFiles, String airline) {
         BestFlightFinder.findBestFlight(departureCity, arrivalCity, csvFiles, airline);
     }
 
@@ -970,9 +968,9 @@ public class WebScraper {
         List<String> allFlights = new ArrayList<>();
 
         // Specify the CSV files containing flight data
-        List<String> csvFiles = Arrays.asList("expedia_flights.csv", "travelocity_flights.csv",
-                "cheapflights_flights.csv", "aircanada_flights.csv",
-                "kayak_flights.csv", "momondo_flights.csv");
+        List<String> csvFiles = Arrays.asList("D:\\CheapFlightsScraper\\Contri_Codes\\Expedia (2).csv", "D:\\CheapFlightsScraper\\Contri_Codes\\NEW_Travelocity (1).csv",
+                "D:\\CheapFlightsScraper\\Contri_Codes\\CheapFlights.csv.csv", "D:\\CheapFlightsScraper\\Contri_Codes\\AirCanada_Data (1).csv",
+                "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Converted_Kayak_Dataset (1).csv", "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Momondo_Flightdata (1).csv");
 
         // Read and add flights from each CSV file
         for (String csvFile : csvFiles) {
@@ -1000,6 +998,8 @@ public class WebScraper {
             System.out.println("\nNo flights available.");
         }
     }
+
+
 
 }
 
