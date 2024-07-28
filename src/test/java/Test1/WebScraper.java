@@ -783,8 +783,8 @@ public class WebScraper {
                     double price = parsePrice(values[2].trim());
 
                     String flightOperator="";
-                    flightOperator = values[3].toLowerCase().startsWith(operator.toLowerCase()) ? operator : values[3];
-
+                    flightOperator = SpellChecker.spellCheck(operator,csvFile).toString();
+                    operator=flightOperator;
 
                     String depCity = values[4].trim().toLowerCase();
                     String arrCity = values[5].trim().toLowerCase();
@@ -965,6 +965,41 @@ public class WebScraper {
         }
     }
 
+    private static void displayFlights() {
+        // Initialize a list to store all the flights
+        List<String> allFlights = new ArrayList<>();
+
+        // Specify the CSV files containing flight data
+        List<String> csvFiles = Arrays.asList("expedia_flights.csv", "travelocity_flights.csv",
+                "cheapflights_flights.csv", "aircanada_flights.csv",
+                "kayak_flights.csv", "momondo_flights.csv");
+
+        // Read and add flights from each CSV file
+        for (String csvFile : csvFiles) {
+            try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    String[] values = line.split(",");
+                    if (values.length < 5) {
+                        continue; // skip invalid rows
+                    }
+                    allFlights.add(line);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Display all flights
+        if (!allFlights.isEmpty()) {
+            System.out.println("\nAll available flights:");
+            for (String flight : allFlights) {
+                System.out.println(flight);
+            }
+        } else {
+            System.out.println("\nNo flights available.");
+        }
+    }
 
 }
 
