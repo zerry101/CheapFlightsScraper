@@ -416,7 +416,7 @@ public class WebScraper {
                     siteToCSVMap.put("CheapFlights", "D:\\CheapFlightsScraper\\Contri_Codes\\CheapFlights.csv.csv");
                     siteToCSVMap.put("Air Canada", "D:\\CheapFlightsScraper\\Contri_Codes\\AirCanada_Data (1).csv");
                     siteToCSVMap.put("Kayak", "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Converted_Kayak_Dataset (1).csv");
-                    siteToCSVMap.put("Momondo", "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Momondo_Flightdata (1).csv");
+                    siteToCSVMap.put("Momondo", "D:\\CheapFlightsScraper\\Contri_Codes\\Momondo_Flighdata.csv");
 
 
                     // Get the list of CSV files based on selected sites
@@ -970,7 +970,7 @@ public class WebScraper {
         // Specify the CSV files containing flight data
         List<String> csvFiles = Arrays.asList("D:\\CheapFlightsScraper\\Contri_Codes\\Expedia (2).csv", "D:\\CheapFlightsScraper\\Contri_Codes\\NEW_Travelocity (1).csv",
                 "D:\\CheapFlightsScraper\\Contri_Codes\\CheapFlights.csv.csv", "D:\\CheapFlightsScraper\\Contri_Codes\\AirCanada_Data (1).csv",
-                "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Converted_Kayak_Dataset (1).csv", "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Momondo_Flightdata (1).csv");
+                "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Converted_Kayak_Dataset (1).csv", "D:\\CheapFlightsScraper\\Contri_Codes\\Momondo_Flighdata.csv");
 
         // Read and add flights from each CSV file
         for (String csvFile : csvFiles) {
