@@ -1,5 +1,7 @@
 package Test1;
 
+
+import org.example.Main;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +15,12 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.format.DateTimeParseException;
+
+
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -264,6 +272,8 @@ public class WebScraper {
 
                         int offset = kmp.search(word);
 
+
+
                         searchFrequencyMap.put(word, searchFrequencyMap.getOrDefault(word, 0) + 1);
 //            int offset = searchWithFreq(word);
                         System.out.println(word + " offset is : " + offset);
@@ -299,28 +309,153 @@ public class WebScraper {
 
                 } else if(option == 2) {
 
+//USING DB (DATASET)
 
 
-                    System.out.println("option2 ");
-                    places.put("toronto", "YYZ");
-                    places.put("delhi", "DEL");
-                    places.put("dubai", "DXB");
-                    places.put("london", "LHR");
-                    places.put("paris", "ORY");
-                    places.put("new york", "JFK");
 
-                    for (Map.Entry<String,String> entry: places.entrySet()) {
-                        System.out.println(entry.getKey()+","+entry.getValue());
+
+                    SpellChecker spellChecker = new SpellChecker();
+                    String spellCheckCSVFilePath="D:\\CheapFlightsScraper\\flight_data.csv";
+//                    spellChecker.loadVocabularyFromCSV(spellCheckCSVFilePath);
+
+
+                    for (Map.Entry<String, String> entry :deparurePlaces().entrySet()) {
+                        redBlackBstTree.put(entry.getKey(), 1);
                     }
 
-                    System.out.println("Enter input");
 
-                    Scanner scanner1=new Scanner(System.in);
 
-                    String query=scanner1.nextLine().trim().toLowerCase();;
+                    Scanner scanner2 = new Scanner(System.in);
+                    String from, to;
 
-                    SearchFrequencyTracker.processSearchQuery(query,searchFrequency);
-                    
+                    // Prompt user to enter departure city and validate
+
+                    System.out.println("The departure Cities with their corresponding airport codes");
+                    for (Map.Entry<String, String> entry : deparurePlaces().entrySet()) {
+                        String city = entry.getKey();
+                        String airportCode = entry.getValue();
+                        System.out.println("City: " + city + ", Airport Code: " + airportCode);
+                    }// make function for running that part of code
+
+
+                    while (true) {
+                        System.out.println("\nPlease Enter Your departure city from the list above:");
+                        from = scanner2.nextLine().trim().toLowerCase();
+                        SearchFrequencyTracker.processSearchQuery(from,searchFrequency);
+
+
+                        if (deparurePlaces().containsKey(from)) {
+                            break; // Valid city entered, exit loop
+                        } else {
+                            if(!redBlackBstTree.autoComplete(from).keySet().isEmpty()){
+                                System.out.println("Did you mean " + redBlackBstTree.autoComplete(from).keySet() + " ?");
+                            }
+                            else{
+                                ArrayList similarWordsArray=SpellChecker.spellCheck(from);
+
+                                System.out.println("Did you mean "+similarWordsArray.get(1)+"?");
+                            }                        }
+
+
+                    }
+
+                    for (Map.Entry<String, String> entry :arrivingPlaces().entrySet()) {
+                        redBlackBstTree.put(entry.getKey(), 1);
+                    }
+
+                    System.out.println("The arrival Cities with their corresponding airport codes");
+                    for (Map.Entry<String, String> entry : arrivingPlaces().entrySet()) {
+                        String city = entry.getKey();
+                        String airportCode = entry.getValue();
+                        System.out.println("City: " + city + ", Airport Code: " + airportCode);
+                    }// make function for running that part of code
+
+
+                    while (true) {
+                        System.out.println("Please Enter Your Arriving city from the list above");
+
+                        to = scanner2.nextLine().trim().toLowerCase();
+
+                        SearchFrequencyTracker.processSearchQuery(to,searchFrequency);
+
+                        if (arrivingPlaces().containsKey(to)) {
+                            if (!from.equals(to)) {
+                                break; // Valid city entered and different from 'from', exit loop
+                            } else {
+                                System.out.println("Arriving city cannot be the same as departure city. Please enter a different city.");
+                            }
+                        } else {
+                            if(!redBlackBstTree.autoComplete(to).keySet().isEmpty()){
+                                System.out.println("Did you mean " + redBlackBstTree.autoComplete(to).keySet() + " ?");
+                            }
+                            else{
+                                ArrayList similarWordsArray=SpellChecker.spellCheck(to);
+
+                                System.out.println("Did you mean "+similarWordsArray.get(1)+"?");
+                            }
+//
+//                                List<String> suggestions = spellChecker.suggestAlternatives(to, 2); // Suggest alternatives //Priyal Thakkar
+
+                                //                          }
+
+
+
+
+
+                        }
+                    }
+
+                    System.out.println("You have selected:");
+                    System.out.println("Departure City: " + from + ", Airport Code: " + deparurePlaces().get(from));
+                    System.out.println("Arriving City: " + to + ", Airport Code: " + arrivingPlaces().get(to));
+
+
+                    List<String> sites = promptForSites(scanner);
+
+                    Map<String, String> siteToCSVMap = new HashMap<>();
+                    siteToCSVMap.put("Expedia", "D:\\CheapFlightsScraper\\Contri_Codes\\Expedia (2).csv"); // change locations
+                    siteToCSVMap.put("Travelocity", "D:\\CheapFlightsScraper\\Contri_Codes\\NEW_Travelocity (1).csv");
+                    siteToCSVMap.put("CheapFlights", "D:\\CheapFlightsScraper\\Contri_Codes\\CheapFlights.csv.csv");
+                    siteToCSVMap.put("Air Canada", "D:\\CheapFlightsScraper\\Contri_Codes\\AirCanada_Data (1).csv");
+                    siteToCSVMap.put("Kayak", "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Converted_Kayak_Dataset (1).csv");
+                    siteToCSVMap.put("Momondo", "D:\\CheapFlightsScraper\\Contri_Codes\\Updated_Momondo_Flightdata (1).csv");
+
+
+                    // Get the list of CSV files based on selected sites
+                    List<String> siteCSVs = new ArrayList<>();
+                    for (String site : sites) {
+                        if (siteToCSVMap.containsKey(site)) {
+                            siteCSVs.add(siteToCSVMap.get(site));
+                        } else {
+                            System.out.println("No CSV file found for site: " + site);
+                        }
+                    }
+
+
+                    int preference = promptForFlightPreference(scanner);
+
+                    // Run the appropriate function based on the user's preference
+                    switch (preference) {
+                        case 1:
+                            findCheapestFlight(from, to, siteCSVs);
+                            break;
+                        case 2:
+                            findShortestFlight(from, to, siteCSVs);
+                            break;
+//                        case 3:
+//                            findBestFlight();
+//                            break;
+//                        case 4:
+//                            flightOPSearch();
+//                            break;
+//                        case 5:
+//                            displayFlights();
+//                            break;
+                        default:
+                            System.out.println("Invalid choice.");
+                            break;
+                    }
+
 
                     SearchFrequencyTracker.displayTopSearches(searchFrequency,10);
 
@@ -497,5 +632,270 @@ public class WebScraper {
             }
         }
     }
+
+    private static Map<String, String> populatePlaces() {
+        Map<String, String> places = new HashMap<>();
+        // Include all specified cities in the Red-Black BST
+        places.put("toronto", "YYZ");
+        places.put("delhi", "DEL");
+        places.put("dubai", "DXB");
+        places.put("london", "LHR");
+        places.put("paris", "ORY");
+        places.put("new york", "JFK");
+        return places;
+    }
+
+    private static Map<String, String> deparurePlaces() {
+        Map<String, String> deparurePlaces = new HashMap<>();
+        // Include all specified cities in the Red-Black BST
+        deparurePlaces.put("toronto", "YYZ");
+        deparurePlaces.put("delhi", "DEL");
+        deparurePlaces.put("dubai", "DXB");
+
+        return deparurePlaces;
+    }
+
+    private static Map<String, String> arrivingPlaces() {
+        Map<String, String> arrivingPlaces = new HashMap<>();
+        // Include all specified cities in the Red-Black BST
+        arrivingPlaces.put("london", "LHR");
+        arrivingPlaces.put("paris", "ORY");
+        arrivingPlaces.put("new york", "JFK");
+        return arrivingPlaces;
+    }
+
+
+
+    private static List<String> promptForSites(Scanner scanner) {
+        List<String> selectedSites = new ArrayList<>();
+        Map<Integer, String> siteOptions = new HashMap<>();
+        siteOptions.put(1, "Expedia");
+        siteOptions.put(2, "Travelocity");
+        siteOptions.put(3, "CheapFlights");
+        siteOptions.put(4, "Air Canada");
+        siteOptions.put(5, "Kayak");
+        siteOptions.put(6, "Momondo");
+
+        System.out.println("\nPlease choose the sites you want to scrape data from (enter numbers separated by commas):");
+        for (Map.Entry<Integer, String> entry : siteOptions.entrySet()) {
+            System.out.println(entry.getKey() + ". " + entry.getValue());
+        }
+
+        scanner.nextLine(); // Clear the buffer
+        String input = scanner.nextLine();
+        String[] choices = input.split(",");
+
+        for (String choice : choices) {
+            try {
+                int option = Integer.parseInt(choice.trim());
+                if (siteOptions.containsKey(option)) {
+                    selectedSites.add(siteOptions.get(option));
+                } else {
+                    System.out.println("Invalid choice: " + choice);
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input: " + choice);
+            }
+        }
+
+        return selectedSites;
+    }
+
+
+    private static double parsePrice(String priceString) {
+        // Remove any non-numeric characters except the dot (.)
+        return Double.parseDouble(priceString.replaceAll("[^\\d.]", ""));
+    }
+
+    private static void findCheapestFlight(String departureCity, String arrivalCity, List<String> siteCSVs) {
+        System.out.println("Finding the cheapest flight...");
+        Flight cheapestFlight = null;
+
+        for (String csvFile : siteCSVs) {
+            try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    if (line.startsWith("Departure Time")) {
+                        continue;
+                    }
+
+                    String[] values = line.split(",");
+
+                    String depTime = values[0];
+                    String arrTime = values[1];
+                    double price = parsePrice(values[2].trim());
+
+                    String operator = values[3];
+                    String depCity = values[4].trim().toLowerCase();
+                    String arrCity = values[5].trim().toLowerCase();
+
+                    if (depCity.equals(departureCity.toLowerCase()) && arrCity.equals(arrivalCity.toLowerCase())) {
+                        Flight currentFlight = new Flight(depTime, arrTime, depCity, arrCity, price, operator);
+
+                        if (cheapestFlight == null || currentFlight.getPrice() < cheapestFlight.getPrice()) {
+                            cheapestFlight = currentFlight;
+                        }
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("Error reading file: " + csvFile);
+                e.printStackTrace();
+            }
+        }
+
+        if (cheapestFlight != null) {
+            System.out.println("Cheapest Flight Details:");
+            System.out.println("Departure Time: " + cheapestFlight.getDepartureTime());
+            System.out.println("Arrival Time: " + cheapestFlight.getArrivalTime());
+            System.out.println("Departure City: " + cheapestFlight.getDepartureCity());
+            System.out.println("Arrival City: " + cheapestFlight.getArrivalCity());
+            System.out.println("Price: $" + cheapestFlight.getPrice());
+            System.out.println("Flight Operator: " + cheapestFlight.getOperator());
+        } else {
+            System.out.println("No flights found for the given cities.");
+        }
+    }
+
+    private static void findShortestFlight(String departureCity, String arrivalCity, List<String> siteCSVs) {
+        System.out.println("Finding the shortest flight...");
+        Flight shortestFlight = null;
+        Duration shortestDuration = null;
+
+        for (String csvFile : siteCSVs) {
+            try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    if (line.startsWith("Departure Time")) {
+                        continue;
+                    }
+
+                    String[] values = line.split(",");
+
+                    String depTime = values[0];
+                    String arrTime = values[1];
+                    double price = parsePrice(values[2].trim());
+
+                    String operator = values[3];
+                    String depCity = values[4].trim().toLowerCase();
+                    String arrCity = values[5].trim().toLowerCase();
+
+                    if (depCity.equals(departureCity.toLowerCase()) && arrCity.equals(arrivalCity.toLowerCase())) {
+                        LocalTime departureLocalTime = convertTo24HourFormat(depTime.trim());
+                        LocalTime arrivalLocalTime = convertTo24HourFormat(arrTime.trim());
+
+                        Duration duration = calculateFlightDuration(departureLocalTime, arrivalLocalTime, arrTime.contains("+1"));
+
+                        Flight currentFlight = new Flight(depTime, arrTime, depCity, arrCity, price, operator);
+
+                        if (shortestDuration == null || duration.compareTo(shortestDuration) < 0) {
+                            shortestFlight = currentFlight;
+                            shortestDuration = duration;
+                        }
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("Error reading file: " + csvFile);
+                e.printStackTrace();
+            }
+        }
+
+        if (shortestFlight != null) {
+            System.out.println("Shortest Flight Details:");
+            System.out.println("Departure Time: " + shortestFlight.getDepartureTime());
+            System.out.println("Arrival Time: " + shortestFlight.getArrivalTime());
+            System.out.println("Departure City: " + shortestFlight.getDepartureCity());
+            System.out.println("Arrival City: " + shortestFlight.getArrivalCity());
+            System.out.println("Price: $" + shortestFlight.getPrice());
+            System.out.println("Flight Operator: " + shortestFlight.getOperator());
+            System.out.println("Duration: " + shortestDuration.toHours() + " hours and " + shortestDuration.toMinutesPart() + " minutes");
+        } else {
+            System.out.println("No flights found for the given cities.");
+        }
+    }
+
+
+    private static class Flight {
+        private final String departureTime;
+        private final String arrivalTime;
+        private final String departureCity;
+        private final String arrivalCity;
+        private final double price;
+        private final String operator;
+
+        public Flight(String departureTime, String arrivalTime, String departureCity, String arrivalCity, double price, String operator) {
+            this.departureTime = departureTime;
+            this.arrivalTime = arrivalTime;
+            this.departureCity = departureCity;
+            this.arrivalCity = arrivalCity;
+            this.price = price;
+            this.operator = operator;
+        }
+
+        public String getDepartureTime() {
+            return departureTime;
+        }
+
+        public String getArrivalTime() {
+            return arrivalTime;
+        }
+
+        public String getDepartureCity() {
+            return departureCity;
+        }
+
+        public String getArrivalCity() {
+            return arrivalCity;
+        }
+
+        public double getPrice() {
+            return price;
+        }
+
+        public String getOperator() {
+            return operator;
+        }
+    }
+
+
+    private static int promptForFlightPreference(Scanner scanner) {
+        System.out.println("\nPlease choose your flight preference:");
+        System.out.println("1. Cheapest flight");
+        System.out.println("2. Shortest flight");
+        System.out.println("3. Best flight");
+        System.out.println("4. Search for FLight Operator");
+        System.out.println("5. Display FLights");
+
+        int preference = -1;
+        while (preference < 1 || preference > 5) {
+            try {
+                preference = scanner.nextInt();
+                if (preference < 1 || preference > 5) {
+                    System.out.println("Invalid input. Please enter a number between 1 and 5.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a number between 1 and 5.");
+                scanner.next(); // Clear invalid input
+            }
+        }
+        return preference;
+    }
+
+    private static LocalTime convertTo24HourFormat(String time) {
+        DateTimeFormatter formatter12Hour = DateTimeFormatter.ofPattern("h:mm a");
+        DateTimeFormatter formatter24Hour = DateTimeFormatter.ofPattern("HH:mm");
+
+        LocalTime localTime = LocalTime.parse(time.trim().replaceAll(" +", " "), formatter12Hour);
+        return LocalTime.parse(localTime.format(formatter24Hour), formatter24Hour);
+    }
+
+
+
+    private static Duration calculateFlightDuration(LocalTime departureTime, LocalTime arrivalTime, boolean nextDay) {
+        if (nextDay) {
+            arrivalTime = arrivalTime.plusHours(24);
+        }
+        return Duration.between(departureTime, arrivalTime);
+    }
+
 }
 

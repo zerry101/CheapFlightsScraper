@@ -1,0 +1,511 @@
+Departure Time,Arrival Time,Flight Price,Airline Name,From,To
+1:27 PM,2:27 PM,1385 CAD,United Airlines,Toronto,New York
+5:36 AM,6:36 AM,460 CAD,Lufthansa,Toronto,New York
+5:16 PM,2:16 AM,854 CAD,United Airlines,Toronto,New York
+10:27 AM,1:27 PM,1434 CAD,Air Canada,Toronto,New York
+2:27 PM,3:27 PM,276 CAD,American Airlines,Toronto,New York
+10:14 PM,5:14 AM,1313 CAD,United Airlines,Toronto,New York
+3:06 PM,1:06 AM,452 CAD,Qatar Airways,Toronto,New York
+9:06 AM,11:06 AM,1471 CAD,Qatar Airways,Toronto,New York
+12:23 PM,3:23 PM,462 CAD,Air Canada,Toronto,New York
+9:34 PM,2:34 AM,1126 CAD,Air India,Toronto,New York
+8:52 PM,9:52 PM,476 CAD,Air India,Toronto,New York
+5:17 PM,2:17 AM,451 CAD,Air India,Toronto,New York
+2:07 PM,7:07 PM,1384 CAD,Air Canada,Toronto,New York
+8:03 AM,4:03 PM,1406 CAD,Air Canada,Toronto,New York
+11:13 AM,6:13 PM,593 CAD,British Airways,Toronto,New York
+4:19 PM,11:19 PM,1338 CAD,Qatar Airways,Toronto,New York
+8:53 AM,6:53 PM,1432 CAD,British Airways,Toronto,New York
+9:21 PM,2:21 AM,264 CAD,Air Canada,Toronto,New York
+10:50 AM,12:50 PM,1056 CAD,British Airways,Toronto,New York
+5:19 AM,2:19 PM,1003 CAD,British Airways,Toronto,New York
+8:40 AM,11:40 AM,1156 CAD,Lufthansa,Toronto,New York
+7:07 AM,12:07 PM,378 CAD,United Airlines,Toronto,New York
+9:27 PM,5:27 AM,952 CAD,Air India,Toronto,New York
+3:53 PM,3:53 AM,332 CAD,Qatar Airways,Toronto,New York
+8:42 AM,5:42 PM,578 CAD,Emirates,Toronto,New York
+9:05 AM,6:05 PM,1187 CAD,Emirates,Toronto,New York
+5:40 PM,9:40 PM,1396 CAD,American Airlines,Toronto,New York
+11:48 AM,5:48 PM,439 CAD,Air Canada,Toronto,New York
+9:41 PM,9:41 AM,1083 CAD,United Airlines,Toronto,New York
+4:25 PM,3:25 AM,832 CAD,British Airways,Toronto,New York
+9:28 PM,10:28 PM,649 CAD,American Airlines,Toronto,New York
+8:07 PM,9:07 PM,558 CAD,American Airlines,Toronto,New York
+8:45 PM,4:45 AM,470 CAD,Lufthansa,Toronto,New York
+3:40 PM,7:40 PM,1335 CAD,Emirates,Toronto,New York
+8:39 AM,11:39 AM,496 CAD,American Airlines,Toronto,New York
+8:15 PM,3:15 AM,931 CAD,Qatar Airways,Toronto,New York
+9:29 PM,6:29 AM,1298 CAD,Air India,Toronto,New York
+7:26 AM,1:26 PM,1280 CAD,British Airways,Toronto,New York
+10:51 PM,8:51 AM,1291 CAD,Lufthansa,Toronto,New York
+6:23 AM,10:23 AM,725 CAD,Air India,Toronto,New York
+5:20 PM,5:20 AM,250 CAD,American Airlines,Toronto,New York
+10:52 AM,3:52 PM,379 CAD,United Airlines,Toronto,New York
+4:36 PM,5:36 PM,872 CAD,Lufthansa,Toronto,New York
+7:32 PM,4:32 AM,1292 CAD,British Airways,Toronto,New York
+3:15 PM,1:15 AM,266 CAD,Air Canada,Toronto,New York
+5:40 AM,6:40 AM,1340 CAD,Air India,Toronto,New York
+8:55 AM,12:55 PM,374 CAD,British Airways,Toronto,New York
+8:21 PM,11:21 PM,1295 CAD,Lufthansa,Toronto,New York
+11:27 PM,7:27 AM,1170 CAD,Emirates,Toronto,New York
+10:20 AM,10:20 PM,476 CAD,Air Canada,Toronto,New York
+11:20 AM,3:20 PM,942 CAD,Air Canada,Toronto,New York
+9:10 PM,2:10 AM,1164 CAD,Emirates,Toronto,New York
+5:36 AM,8:36 AM,483 CAD,Air India,Toronto,New York
+8:51 PM,3:51 AM,1003 CAD,British Airways,Toronto,New York
+2:24 PM,10:24 PM,1288 CAD,Air Canada,Toronto,New York
+11:26 AM,9:26 PM,968 CAD,American Airlines,Toronto,New York
+8:21 PM,9:21 PM,564 CAD,United Airlines,Toronto,Paris
+12:27 PM,9:27 PM,757 CAD,American Airlines,Toronto,Paris
+7:28 AM,8:28 AM,719 CAD,American Airlines,Toronto,Paris
+6:58 AM,5:58 PM,964 CAD,British Airways,Toronto,Paris
+10:21 PM,10:21 AM,576 CAD,British Airways,Toronto,Paris
+2:52 PM,7:52 PM,902 CAD,Air India,Toronto,Paris
+5:49 AM,7:49 AM,1025 CAD,Qatar Airways,Toronto,Paris
+10:21 AM,9:21 PM,1064 CAD,Lufthansa,Toronto,Paris
+7:35 PM,12:35 AM,489 CAD,Qatar Airways,Toronto,Paris
+10:48 AM,10:48 PM,1132 CAD,Delta Airlines,Toronto,Paris
+7:42 AM,4:42 PM,1427 CAD,American Airlines,Toronto,Paris
+8:45 AM,3:45 PM,908 CAD,British Airways,Toronto,Paris
+10:30 AM,10:30 PM,330 CAD,Lufthansa,Toronto,Paris
+5:35 AM,7:35 AM,536 CAD,Lufthansa,Toronto,Paris
+8:50 PM,7:50 AM,515 CAD,Air India,Toronto,Paris
+5:24 AM,4:24 PM,769 CAD,Delta Airlines,Toronto,Paris
+5:09 PM,4:09 AM,810 CAD,Delta Airlines,Toronto,Paris
+3:53 PM,2:53 AM,1041 CAD,Lufthansa,Toronto,Paris
+7:54 AM,8:54 AM,287 CAD,Qatar Airways,Toronto,Paris
+6:21 AM,3:21 PM,1392 CAD,British Airways,Toronto,Paris
+10:45 PM,5:45 AM,756 CAD,Air Canada,Toronto,Paris
+8:41 AM,6:41 PM,272 CAD,United Airlines,Toronto,Paris
+5:16 AM,8:16 AM,650 CAD,Delta Airlines,Toronto,Paris
+9:48 PM,4:48 AM,545 CAD,Air India,Toronto,Paris
+10:46 AM,10:46 PM,870 CAD,Emirates,Toronto,Paris
+10:27 PM,10:27 AM,517 CAD,Delta Airlines,Toronto,Paris
+4:00 PM,3:00 AM,691 CAD,Delta Airlines,Toronto,Paris
+10:40 PM,11:40 PM,1250 CAD,British Airways,Toronto,Paris
+5:42 PM,4:42 AM,1458 CAD,Qatar Airways,Toronto,Paris
+1:33 PM,8:33 PM,729 CAD,Air India,Toronto,Paris
+4:56 PM,1:56 AM,1000 CAD,Lufthansa,Toronto,Paris
+8:02 AM,11:02 AM,1373 CAD,Air India,Toronto,Paris
+11:42 PM,9:42 AM,1234 CAD,Qatar Airways,Toronto,Paris
+2:45 PM,12:45 AM,674 CAD,Air Canada,Toronto,Paris
+12:28 PM,12:28 AM,1259 CAD,United Airlines,Toronto,Paris
+7:29 AM,7:29 PM,901 CAD,Air India,Toronto,Paris
+2:45 PM,1:45 AM,980 CAD,Emirates,Toronto,Paris
+3:53 PM,11:53 PM,873 CAD,Emirates,Toronto,Paris
+11:08 PM,10:08 AM,764 CAD,Lufthansa,Toronto,Paris
+5:13 AM,4:13 PM,1443 CAD,Qatar Airways,Toronto,Paris
+11:58 PM,11:58 AM,629 CAD,Air Canada,Toronto,Paris
+5:51 PM,8:51 PM,1486 CAD,American Airlines,Toronto,Paris
+1:39 PM,9:39 PM,1353 CAD,Delta Airlines,Toronto,Paris
+8:24 AM,8:24 PM,1395 CAD,Qatar Airways,Toronto,Paris
+9:23 AM,3:23 PM,1125 CAD,Air India,Toronto,Paris
+5:07 PM,10:07 PM,1425 CAD,Lufthansa,Toronto,Paris
+8:16 AM,3:16 PM,815 CAD,Qatar Airways,Toronto,Paris
+11:44 PM,7:44 AM,1020 CAD,British Airways,Toronto,Paris
+8:36 AM,6:36 PM,1421 CAD,American Airlines,Toronto,Paris
+6:24 AM,9:24 AM,772 CAD,Air Canada,Toronto,Paris
+3:01 PM,3:01 AM,1183 CAD,United Airlines,Toronto,Paris
+9:10 PM,12:10 AM,575 CAD,Air India,Toronto,Paris
+1:37 PM,8:37 PM,986 CAD,American Airlines,Toronto,Paris
+8:09 PM,6:09 AM,1431 CAD,Qatar Airways,Toronto,Paris
+10:21 AM,2:21 PM,1082 CAD,Air India,Toronto,Paris
+1:07 PM,10:07 PM,1144 CAD,United Airlines,Toronto,Paris
+9:16 PM,7:16 AM,646 CAD,United Airlines,Toronto,London
+7:25 PM,1:25 AM,539 CAD,Emirates,Toronto,London
+7:55 AM,9:55 AM,890 CAD,American Airlines,Toronto,London
+5:04 AM,7:04 AM,934 CAD,Lufthansa,Toronto,London
+1:10 PM,12:10 AM,1472 CAD,Air India,Toronto,London
+7:16 AM,3:16 PM,1463 CAD,Lufthansa,Toronto,London
+9:30 AM,4:30 PM,500 CAD,Air Canada,Toronto,London
+12:10 PM,9:10 PM,830 CAD,United Airlines,Toronto,London
+5:35 AM,12:35 PM,405 CAD,British Airways,Toronto,London
+8:30 PM,4:30 AM,568 CAD,Air Canada,Toronto,London
+10:57 PM,8:57 AM,883 CAD,Delta Airlines,Toronto,London
+4:01 PM,2:01 AM,743 CAD,Air India,Toronto,London
+8:56 AM,10:56 AM,344 CAD,United Airlines,Toronto,London
+9:41 AM,2:41 PM,925 CAD,Lufthansa,Toronto,London
+5:08 AM,8:08 AM,715 CAD,Air India,Toronto,London
+6:11 AM,8:11 AM,1331 CAD,Qatar Airways,Toronto,London
+10:54 AM,10:54 PM,311 CAD,Qatar Airways,Toronto,London
+12:09 PM,5:09 PM,331 CAD,United Airlines,Toronto,London
+11:12 AM,8:12 PM,392 CAD,Qatar Airways,Toronto,London
+7:26 AM,2:26 PM,603 CAD,Air Canada,Toronto,London
+6:38 AM,6:38 PM,689 CAD,Air India,Toronto,London
+3:11 PM,8:11 PM,1341 CAD,Air Canada,Toronto,London
+5:17 AM,12:17 PM,1495 CAD,Emirates,Toronto,London
+2:25 PM,5:25 PM,785 CAD,Delta Airlines,Toronto,London
+5:20 AM,1:20 PM,1053 CAD,Lufthansa,Toronto,London
+6:56 AM,11:56 AM,785 CAD,United Airlines,Toronto,London
+5:32 PM,3:32 AM,469 CAD,Delta Airlines,Toronto,London
+5:46 AM,11:46 AM,618 CAD,United Airlines,Toronto,London
+11:42 PM,5:42 AM,550 CAD,Air India,Toronto,London
+5:00 AM,11:00 AM,1081 CAD,United Airlines,Toronto,London
+11:51 PM,4:51 AM,1465 CAD,Lufthansa,Toronto,London
+6:23 AM,12:23 PM,336 CAD,Emirates,Toronto,London
+5:52 AM,9:52 AM,1140 CAD,Qatar Airways,Toronto,London
+9:51 PM,8:51 AM,670 CAD,Emirates,Toronto,London
+9:17 AM,7:17 PM,1165 CAD,Lufthansa,Toronto,London
+6:57 AM,11:57 AM,409 CAD,British Airways,Toronto,London
+12:44 PM,9:44 PM,981 CAD,United Airlines,Toronto,London
+8:44 AM,2:44 PM,684 CAD,Emirates,Toronto,London
+7:57 PM,10:57 PM,285 CAD,British Airways,Toronto,London
+10:02 PM,1:02 AM,772 CAD,British Airways,Toronto,London
+3:12 PM,1:12 AM,968 CAD,Emirates,Toronto,London
+12:29 PM,12:29 AM,610 CAD,Qatar Airways,Toronto,London
+4:27 PM,3:27 AM,736 CAD,Delta Airlines,Toronto,London
+6:12 PM,8:12 PM,1202 CAD,American Airlines,Toronto,London
+10:15 AM,5:15 PM,1467 CAD,Emirates,Toronto,London
+5:20 AM,4:20 PM,1372 CAD,American Airlines,Toronto,London
+6:13 PM,3:13 AM,365 CAD,American Airlines,Toronto,London
+10:23 PM,12:23 AM,1092 CAD,American Airlines,Toronto,London
+6:18 PM,1:18 AM,1465 CAD,Delta Airlines,Toronto,London
+1:33 PM,12:33 AM,831 CAD,United Airlines,Toronto,London
+8:06 PM,6:06 AM,361 CAD,Lufthansa,Toronto,London
+5:50 PM,2:50 AM,1095 CAD,Delta Airlines,Toronto,London
+5:54 AM,9:54 AM,754 CAD,Air India,Toronto,London
+9:34 PM,2:34 AM,560 CAD,Air Canada,Toronto,London
+10:30 AM,2:30 PM,1217 CAD,Emirates,Toronto,London
+9:33 PM,6:33 AM,282 CAD,United Airlines,Toronto,London
+8:34 AM,8:34 PM,1339 CAD,Qatar Airways,Delhi,New York
+5:25 PM,2:25 AM,1251 CAD,Lufthansa,Delhi,New York
+6:47 PM,11:47 PM,1166 CAD,Lufthansa,Delhi,New York
+11:22 AM,3:22 PM,334 CAD,United Airlines,Delhi,New York
+9:01 AM,7:01 PM,391 CAD,Emirates,Delhi,New York
+5:42 PM,9:42 PM,586 CAD,American Airlines,Delhi,New York
+9:41 PM,6:41 AM,1305 CAD,United Airlines,Delhi,New York
+11:38 PM,4:38 AM,1251 CAD,Lufthansa,Delhi,New York
+7:59 AM,6:59 PM,603 CAD,Lufthansa,Delhi,New York
+10:02 AM,3:02 PM,1206 CAD,Lufthansa,Delhi,New York
+11:35 AM,5:35 PM,1098 CAD,Emirates,Delhi,New York
+1:07 PM,1:07 AM,1392 CAD,Qatar Airways,Delhi,New York
+5:43 AM,10:43 AM,904 CAD,Air Canada,Delhi,New York
+9:55 PM,11:55 PM,603 CAD,Air Canada,Delhi,New York
+9:48 AM,1:48 PM,879 CAD,American Airlines,Delhi,New York
+5:57 AM,2:57 PM,1235 CAD,United Airlines,Delhi,New York
+2:29 PM,4:29 PM,704 CAD,United Airlines,Delhi,New York
+4:38 PM,6:38 PM,344 CAD,American Airlines,Delhi,New York
+5:23 AM,4:23 PM,548 CAD,American Airlines,Delhi,New York
+1:26 PM,4:26 PM,824 CAD,Air Canada,Delhi,New York
+1:40 PM,3:40 PM,1352 CAD,British Airways,Delhi,New York
+7:17 PM,1:17 AM,729 CAD,American Airlines,Delhi,New York
+2:43 PM,8:43 PM,446 CAD,United Airlines,Delhi,New York
+6:13 AM,9:13 AM,314 CAD,Air Canada,Delhi,New York
+7:34 AM,8:34 AM,819 CAD,Lufthansa,Delhi,New York
+8:33 PM,7:33 AM,1497 CAD,American Airlines,Delhi,New York
+1:26 PM,8:26 PM,420 CAD,American Airlines,Delhi,New York
+5:34 PM,12:34 AM,729 CAD,Delta Airlines,Delhi,New York
+12:02 PM,9:02 PM,1394 CAD,Air India,Delhi,New York
+6:18 AM,3:18 PM,942 CAD,Emirates,Delhi,New York
+4:09 PM,1:09 AM,923 CAD,Delta Airlines,Delhi,New York
+5:20 AM,5:20 PM,476 CAD,Delta Airlines,Delhi,New York
+5:23 AM,3:23 PM,667 CAD,Emirates,Delhi,New York
+12:56 PM,8:56 PM,1067 CAD,Delta Airlines,Delhi,New York
+10:10 PM,2:10 AM,643 CAD,Qatar Airways,Delhi,New York
+10:48 AM,11:48 AM,642 CAD,Emirates,Delhi,New York
+10:33 AM,9:33 PM,580 CAD,American Airlines,Delhi,New York
+1:43 PM,11:43 PM,504 CAD,Delta Airlines,Delhi,New York
+10:02 AM,4:02 PM,736 CAD,American Airlines,Delhi,New York
+11:12 PM,5:12 AM,1183 CAD,United Airlines,Delhi,New York
+9:47 AM,3:47 PM,912 CAD,Air India,Delhi,New York
+3:49 PM,8:49 PM,469 CAD,Air India,Delhi,New York
+5:54 AM,1:54 PM,359 CAD,American Airlines,Delhi,New York
+7:17 AM,2:17 PM,1106 CAD,British Airways,Delhi,New York
+9:37 AM,12:37 PM,863 CAD,British Airways,Delhi,New York
+1:09 PM,9:09 PM,532 CAD,Qatar Airways,Delhi,New York
+10:36 PM,3:36 AM,1198 CAD,British Airways,Delhi,New York
+9:07 PM,11:07 PM,499 CAD,Delta Airlines,Delhi,New York
+10:51 AM,1:51 PM,713 CAD,American Airlines,Delhi,New York
+10:28 AM,8:28 PM,731 CAD,American Airlines,Delhi,New York
+7:41 AM,5:41 PM,435 CAD,Lufthansa,Delhi,New York
+12:44 PM,6:44 PM,1489 CAD,American Airlines,Delhi,New York
+11:24 AM,7:24 PM,1161 CAD,Air India,Delhi,New York
+5:13 AM,8:13 AM,1353 CAD,Emirates,Delhi,New York
+6:02 AM,6:02 PM,556 CAD,Lufthansa,Delhi,New York
+3:21 PM,11:21 PM,1199 CAD,Lufthansa,Delhi,New York
+10:05 PM,12:05 AM,857 CAD,Air India,Delhi,Paris
+7:36 PM,3:36 AM,979 CAD,Air Canada,Delhi,Paris
+9:01 AM,8:01 PM,1116 CAD,American Airlines,Delhi,Paris
+5:03 AM,8:03 AM,345 CAD,Emirates,Delhi,Paris
+1:00 PM,5:00 PM,1155 CAD,Qatar Airways,Delhi,Paris
+4:34 PM,9:34 PM,302 CAD,Air India,Delhi,Paris
+5:06 PM,11:06 PM,1041 CAD,American Airlines,Delhi,Paris
+2:38 PM,2:38 AM,307 CAD,Delta Airlines,Delhi,Paris
+5:48 AM,1:48 PM,1438 CAD,Lufthansa,Delhi,Paris
+5:44 PM,7:44 PM,250 CAD,Delta Airlines,Delhi,Paris
+6:49 PM,1:49 AM,1102 CAD,Delta Airlines,Delhi,Paris
+1:58 PM,5:58 PM,990 CAD,Delta Airlines,Delhi,Paris
+6:52 PM,1:52 AM,1337 CAD,American Airlines,Delhi,Paris
+6:50 AM,4:50 PM,889 CAD,Emirates,Delhi,Paris
+1:53 PM,1:53 AM,671 CAD,British Airways,Delhi,Paris
+11:51 PM,10:51 AM,1162 CAD,British Airways,Delhi,Paris
+2:58 PM,6:58 PM,681 CAD,United Airlines,Delhi,Paris
+2:56 PM,9:56 PM,463 CAD,American Airlines,Delhi,Paris
+7:19 PM,5:19 AM,848 CAD,Air India,Delhi,Paris
+4:03 PM,4:03 AM,291 CAD,United Airlines,Delhi,Paris
+9:49 PM,3:49 AM,461 CAD,Delta Airlines,Delhi,Paris
+9:40 AM,6:40 PM,944 CAD,Emirates,Delhi,Paris
+9:16 PM,7:16 AM,527 CAD,American Airlines,Delhi,Paris
+9:46 PM,3:46 AM,727 CAD,American Airlines,Delhi,Paris
+9:53 AM,9:53 PM,310 CAD,Emirates,Delhi,Paris
+7:46 PM,7:46 AM,894 CAD,American Airlines,Delhi,Paris
+6:30 PM,2:30 AM,756 CAD,United Airlines,Delhi,Paris
+5:54 AM,7:54 AM,659 CAD,American Airlines,Delhi,Paris
+11:21 AM,2:21 PM,551 CAD,Emirates,Delhi,Paris
+12:20 PM,11:20 PM,1338 CAD,Air Canada,Delhi,Paris
+6:44 PM,4:44 AM,730 CAD,Air Canada,Delhi,Paris
+11:42 AM,4:42 PM,1251 CAD,Emirates,Delhi,Paris
+5:47 PM,8:47 PM,446 CAD,Emirates,Delhi,Paris
+10:54 PM,4:54 AM,806 CAD,Delta Airlines,Delhi,Paris
+6:56 PM,6:56 AM,1132 CAD,Emirates,Delhi,Paris
+6:49 AM,7:49 AM,498 CAD,Lufthansa,Delhi,Paris
+7:44 AM,6:44 PM,1412 CAD,Qatar Airways,Delhi,Paris
+8:51 PM,1:51 AM,883 CAD,Qatar Airways,Delhi,Paris
+2:51 PM,7:51 PM,540 CAD,British Airways,Delhi,Paris
+11:03 PM,7:03 AM,989 CAD,Lufthansa,Delhi,Paris
+5:09 PM,5:09 AM,311 CAD,Air India,Delhi,Paris
+9:42 AM,5:42 PM,871 CAD,Air Canada,Delhi,Paris
+10:54 AM,5:54 PM,930 CAD,Delta Airlines,Delhi,Paris
+11:12 AM,11:12 PM,446 CAD,Lufthansa,Delhi,Paris
+3:50 PM,10:50 PM,605 CAD,Qatar Airways,Delhi,Paris
+5:22 AM,4:22 PM,396 CAD,British Airways,Delhi,Paris
+1:31 PM,9:31 PM,807 CAD,Air India,Delhi,Paris
+2:06 PM,2:06 AM,737 CAD,British Airways,Delhi,Paris
+3:48 PM,12:48 AM,368 CAD,Air India,Delhi,Paris
+5:31 PM,4:31 AM,658 CAD,Air India,Delhi,Paris
+7:31 AM,11:31 AM,1497 CAD,Air India,Delhi,Paris
+8:24 AM,6:24 PM,1223 CAD,Air Canada,Delhi,Paris
+7:29 PM,2:29 AM,481 CAD,Air India,Delhi,Paris
+6:47 AM,9:47 AM,327 CAD,Emirates,Delhi,Paris
+9:44 AM,1:44 PM,272 CAD,American Airlines,Delhi,Paris
+9:42 AM,2:42 PM,654 CAD,United Airlines,Delhi,Paris
+9:21 PM,5:21 AM,1226 CAD,British Airways,Delhi,London
+7:51 AM,11:51 AM,847 CAD,Air Canada,Delhi,London
+11:45 PM,6:45 AM,1420 CAD,Qatar Airways,Delhi,London
+1:07 PM,3:07 PM,909 CAD,Emirates,Delhi,London
+1:17 PM,9:17 PM,1117 CAD,United Airlines,Delhi,London
+8:12 AM,4:12 PM,632 CAD,Emirates,Delhi,London
+5:21 AM,10:21 AM,952 CAD,Delta Airlines,Delhi,London
+6:09 AM,11:09 AM,636 CAD,United Airlines,Delhi,London
+6:59 PM,6:59 AM,873 CAD,Air Canada,Delhi,London
+3:57 PM,6:57 PM,542 CAD,American Airlines,Delhi,London
+2:11 PM,12:11 AM,336 CAD,Emirates,Delhi,London
+6:59 AM,5:59 PM,532 CAD,Lufthansa,Delhi,London
+11:14 PM,6:14 AM,755 CAD,Air India,Delhi,London
+6:49 PM,11:49 PM,624 CAD,Emirates,Delhi,London
+10:28 AM,5:28 PM,1176 CAD,American Airlines,Delhi,London
+5:36 PM,9:36 PM,671 CAD,Lufthansa,Delhi,London
+11:16 PM,9:16 AM,1460 CAD,Lufthansa,Delhi,London
+9:22 AM,7:22 PM,1126 CAD,Delta Airlines,Delhi,London
+2:27 PM,5:27 PM,1195 CAD,Lufthansa,Delhi,London
+8:45 PM,12:45 AM,1048 CAD,British Airways,Delhi,London
+10:58 PM,7:58 AM,1417 CAD,American Airlines,Delhi,London
+10:24 PM,4:24 AM,997 CAD,British Airways,Delhi,London
+5:49 PM,5:49 AM,748 CAD,United Airlines,Delhi,London
+4:34 PM,5:34 PM,995 CAD,Air India,Delhi,London
+7:00 AM,11:00 AM,1075 CAD,Lufthansa,Delhi,London
+6:11 PM,5:11 AM,1253 CAD,Emirates,Delhi,London
+5:51 AM,10:51 AM,1315 CAD,Air Canada,Delhi,London
+10:14 AM,7:14 PM,547 CAD,United Airlines,Delhi,London
+8:40 PM,9:40 PM,1173 CAD,British Airways,Delhi,London
+10:53 AM,2:53 PM,480 CAD,British Airways,Delhi,London
+9:14 AM,4:14 PM,764 CAD,American Airlines,Delhi,London
+10:57 AM,2:57 PM,867 CAD,British Airways,Delhi,London
+5:47 PM,9:47 PM,1139 CAD,Delta Airlines,Delhi,London
+5:52 AM,1:52 PM,1135 CAD,Air Canada,Delhi,London
+11:14 AM,12:14 PM,703 CAD,British Airways,Delhi,London
+4:27 PM,2:27 AM,1197 CAD,United Airlines,Delhi,London
+9:48 AM,4:48 PM,250 CAD,Air Canada,Delhi,London
+10:30 PM,3:30 AM,697 CAD,Qatar Airways,Delhi,London
+10:37 AM,7:37 PM,1238 CAD,British Airways,Delhi,London
+12:21 PM,7:21 PM,923 CAD,Air India,Delhi,London
+10:03 AM,1:03 PM,1331 CAD,Air India,Delhi,London
+10:43 PM,11:43 PM,626 CAD,British Airways,Delhi,London
+4:50 PM,4:50 AM,1423 CAD,American Airlines,Delhi,London
+1:52 PM,7:52 PM,1395 CAD,British Airways,Delhi,London
+6:55 PM,9:55 PM,1104 CAD,Qatar Airways,Delhi,London
+11:16 PM,2:16 AM,539 CAD,United Airlines,Delhi,London
+4:50 PM,12:50 AM,1231 CAD,United Airlines,Delhi,London
+8:44 AM,12:44 PM,660 CAD,Qatar Airways,Delhi,London
+10:33 PM,11:33 PM,846 CAD,American Airlines,Delhi,London
+11:22 AM,8:22 PM,766 CAD,Lufthansa,Delhi,London
+11:00 AM,9:00 PM,1480 CAD,Delta Airlines,Delhi,London
+8:07 AM,3:07 PM,1297 CAD,United Airlines,Delhi,London
+5:05 AM,8:05 AM,607 CAD,British Airways,Delhi,London
+10:51 PM,2:51 AM,1300 CAD,Air India,Delhi,London
+5:03 AM,10:03 AM,457 CAD,Air Canada,Delhi,London
+10:28 PM,3:28 AM,521 CAD,British Airways,Delhi,London
+7:20 PM,4:20 AM,1177 CAD,Air Canada,Dubai,New York
+8:50 PM,8:50 AM,667 CAD,United Airlines,Dubai,New York
+5:22 PM,12:22 AM,1240 CAD,Air India,Dubai,New York
+11:14 PM,7:14 AM,1392 CAD,American Airlines,Dubai,New York
+10:37 AM,7:37 PM,1244 CAD,Delta Airlines,Dubai,New York
+10:01 PM,2:01 AM,563 CAD,American Airlines,Dubai,New York
+7:59 PM,12:59 AM,1121 CAD,Air Canada,Dubai,New York
+2:41 PM,8:41 PM,947 CAD,Air Canada,Dubai,New York
+6:45 AM,8:45 AM,1127 CAD,American Airlines,Dubai,New York
+7:39 AM,2:39 PM,1237 CAD,Emirates,Dubai,New York
+3:04 PM,5:04 PM,756 CAD,Emirates,Dubai,New York
+11:54 PM,5:54 AM,1048 CAD,Delta Airlines,Dubai,New York
+2:19 PM,3:19 PM,531 CAD,Qatar Airways,Dubai,New York
+6:28 AM,5:28 PM,812 CAD,Air Canada,Dubai,New York
+11:51 PM,4:51 AM,649 CAD,Delta Airlines,Dubai,New York
+9:37 AM,5:37 PM,572 CAD,Emirates,Dubai,New York
+2:02 PM,9:02 PM,995 CAD,Lufthansa,Dubai,New York
+3:34 PM,8:34 PM,905 CAD,American Airlines,Dubai,New York
+6:26 AM,3:26 PM,1441 CAD,Emirates,Dubai,New York
+6:03 AM,2:03 PM,1151 CAD,Air Canada,Dubai,New York
+4:02 PM,3:02 AM,265 CAD,American Airlines,Dubai,New York
+3:18 PM,3:18 AM,827 CAD,Emirates,Dubai,New York
+2:51 PM,4:51 PM,982 CAD,British Airways,Dubai,New York
+5:57 AM,5:57 PM,1005 CAD,Lufthansa,Dubai,New York
+6:44 PM,5:44 AM,1122 CAD,Qatar Airways,Dubai,New York
+7:11 AM,6:11 PM,1104 CAD,United Airlines,Dubai,New York
+8:55 PM,3:55 AM,550 CAD,Air Canada,Dubai,New York
+8:30 AM,1:30 PM,489 CAD,Delta Airlines,Dubai,New York
+1:53 PM,6:53 PM,419 CAD,Emirates,Dubai,New York
+8:37 PM,2:37 AM,1394 CAD,American Airlines,Dubai,New York
+4:29 PM,10:29 PM,1433 CAD,Lufthansa,Dubai,New York
+3:25 PM,7:25 PM,940 CAD,Air India,Dubai,New York
+4:13 PM,5:13 PM,470 CAD,Qatar Airways,Dubai,New York
+4:54 PM,7:54 PM,1227 CAD,British Airways,Dubai,New York
+8:01 PM,9:01 PM,1264 CAD,Delta Airlines,Dubai,New York
+6:57 PM,11:57 PM,441 CAD,Air Canada,Dubai,New York
+8:25 AM,5:25 PM,895 CAD,Lufthansa,Dubai,New York
+9:01 AM,4:01 PM,679 CAD,Lufthansa,Dubai,New York
+1:39 PM,3:39 PM,1324 CAD,Air India,Dubai,New York
+6:03 PM,4:03 AM,1220 CAD,American Airlines,Dubai,New York
+5:43 PM,9:43 PM,695 CAD,Air Canada,Dubai,New York
+9:34 AM,3:34 PM,1129 CAD,Air India,Dubai,New York
+8:26 PM,10:26 PM,1409 CAD,Emirates,Dubai,New York
+6:37 PM,9:37 PM,1359 CAD,Air India,Dubai,New York
+10:04 PM,12:04 AM,305 CAD,Air Canada,Dubai,New York
+9:44 AM,7:44 PM,1435 CAD,United Airlines,Dubai,New York
+4:03 PM,8:03 PM,1319 CAD,British Airways,Dubai,New York
+7:03 PM,5:03 AM,930 CAD,Air India,Dubai,New York
+6:59 AM,7:59 AM,879 CAD,American Airlines,Dubai,New York
+3:57 PM,4:57 PM,1258 CAD,United Airlines,Dubai,New York
+8:17 PM,12:17 AM,475 CAD,Air India,Dubai,New York
+11:26 PM,5:26 AM,796 CAD,United Airlines,Dubai,New York
+7:41 AM,4:41 PM,978 CAD,Qatar Airways,Dubai,New York
+10:14 AM,1:14 PM,291 CAD,Lufthansa,Dubai,New York
+10:06 AM,8:06 PM,826 CAD,Qatar Airways,Dubai,New York
+1:52 PM,1:52 AM,571 CAD,Lufthansa,Dubai,New York
+10:32 AM,7:32 PM,1256 CAD,United Airlines,Dubai,Paris
+5:04 AM,1:04 PM,898 CAD,Delta Airlines,Dubai,Paris
+1:17 PM,12:17 AM,1308 CAD,Air India,Dubai,Paris
+5:33 PM,8:33 PM,861 CAD,Emirates,Dubai,Paris
+9:44 PM,9:44 AM,1030 CAD,United Airlines,Dubai,Paris
+3:17 PM,10:17 PM,1470 CAD,Lufthansa,Dubai,Paris
+8:07 PM,10:07 PM,1135 CAD,United Airlines,Dubai,Paris
+9:56 PM,4:56 AM,274 CAD,British Airways,Dubai,Paris
+10:59 PM,12:59 AM,915 CAD,Qatar Airways,Dubai,Paris
+10:31 PM,6:31 AM,692 CAD,Qatar Airways,Dubai,Paris
+7:45 AM,11:45 AM,264 CAD,United Airlines,Dubai,Paris
+7:13 PM,7:13 AM,656 CAD,Emirates,Dubai,Paris
+8:06 PM,12:06 AM,572 CAD,Qatar Airways,Dubai,Paris
+9:19 AM,2:19 PM,709 CAD,Emirates,Dubai,Paris
+6:52 AM,3:52 PM,915 CAD,United Airlines,Dubai,Paris
+4:04 PM,1:04 AM,725 CAD,Delta Airlines,Dubai,Paris
+9:17 PM,9:17 AM,1314 CAD,Delta Airlines,Dubai,Paris
+11:46 PM,3:46 AM,1120 CAD,Emirates,Dubai,Paris
+3:56 PM,11:56 PM,475 CAD,Delta Airlines,Dubai,Paris
+8:50 PM,5:50 AM,290 CAD,United Airlines,Dubai,Paris
+7:18 PM,7:18 AM,346 CAD,Air Canada,Dubai,Paris
+10:18 AM,5:18 PM,456 CAD,Emirates,Dubai,Paris
+6:20 AM,2:20 PM,1113 CAD,Qatar Airways,Dubai,Paris
+4:45 PM,6:45 PM,1422 CAD,British Airways,Dubai,Paris
+10:46 PM,1:46 AM,1136 CAD,United Airlines,Dubai,Paris
+11:10 PM,3:10 AM,1091 CAD,Emirates,Dubai,Paris
+10:37 PM,12:37 AM,838 CAD,Air Canada,Dubai,Paris
+11:45 AM,4:45 PM,883 CAD,Air Canada,Dubai,Paris
+12:44 PM,12:44 AM,1211 CAD,Qatar Airways,Dubai,Paris
+11:35 PM,5:35 AM,512 CAD,British Airways,Dubai,Paris
+8:07 AM,1:07 PM,350 CAD,Air India,Dubai,Paris
+3:25 PM,7:25 PM,1081 CAD,American Airlines,Dubai,Paris
+11:15 AM,7:15 PM,492 CAD,British Airways,Dubai,Paris
+8:45 AM,3:45 PM,690 CAD,Qatar Airways,Dubai,Paris
+10:58 AM,6:58 PM,967 CAD,Emirates,Dubai,Paris
+1:56 PM,3:56 PM,1035 CAD,Qatar Airways,Dubai,Paris
+9:42 PM,11:42 PM,1260 CAD,Qatar Airways,Dubai,Paris
+5:44 PM,3:44 AM,1491 CAD,Air India,Dubai,Paris
+8:39 AM,1:39 PM,1294 CAD,British Airways,Dubai,Paris
+4:37 PM,8:37 PM,500 CAD,United Airlines,Dubai,Paris
+12:34 PM,7:34 PM,724 CAD,British Airways,Dubai,Paris
+9:31 AM,7:31 PM,972 CAD,British Airways,Dubai,Paris
+6:38 AM,7:38 AM,1371 CAD,United Airlines,Dubai,Paris
+12:07 PM,12:07 AM,861 CAD,Emirates,Dubai,Paris
+12:02 PM,8:02 PM,1104 CAD,Air Canada,Dubai,Paris
+12:34 PM,2:34 PM,286 CAD,Air Canada,Dubai,Paris
+7:21 AM,4:21 PM,878 CAD,Lufthansa,Dubai,Paris
+2:08 PM,9:08 PM,964 CAD,Delta Airlines,Dubai,Paris
+11:54 AM,1:54 PM,931 CAD,United Airlines,Dubai,Paris
+5:35 PM,1:35 AM,786 CAD,United Airlines,Dubai,Paris
+4:53 PM,9:53 PM,749 CAD,Air India,Dubai,Paris
+6:13 PM,6:13 AM,994 CAD,United Airlines,Dubai,Paris
+5:10 AM,5:10 PM,1376 CAD,British Airways,Dubai,Paris
+8:46 PM,12:46 AM,392 CAD,Delta Airlines,Dubai,Paris
+11:32 PM,4:32 AM,809 CAD,Air India,Dubai,Paris
+5:18 PM,12:18 AM,468 CAD,Emirates,Dubai,Paris
+11:20 PM,5:20 AM,900 CAD,Emirates,Dubai,London
+11:22 AM,3:22 PM,517 CAD,Emirates,Dubai,London
+10:30 PM,9:30 AM,778 CAD,United Airlines,Dubai,London
+8:44 AM,8:44 PM,1489 CAD,Air India,Dubai,London
+11:51 AM,5:51 PM,891 CAD,United Airlines,Dubai,London
+2:06 PM,5:06 PM,722 CAD,Lufthansa,Dubai,London
+10:40 AM,10:40 PM,723 CAD,Air Canada,Dubai,London
+10:26 AM,6:26 PM,1100 CAD,Emirates,Dubai,London
+8:02 AM,7:02 PM,1045 CAD,Emirates,Dubai,London
+7:10 PM,3:10 AM,1290 CAD,British Airways,Dubai,London
+10:52 PM,7:52 AM,779 CAD,British Airways,Dubai,London
+8:04 PM,4:04 AM,1287 CAD,American Airlines,Dubai,London
+12:14 PM,10:14 PM,1088 CAD,Delta Airlines,Dubai,London
+9:42 AM,8:42 PM,928 CAD,Lufthansa,Dubai,London
+10:51 PM,3:51 AM,805 CAD,Lufthansa,Dubai,London
+10:44 PM,5:44 AM,399 CAD,Qatar Airways,Dubai,London
+3:02 PM,8:02 PM,503 CAD,American Airlines,Dubai,London
+5:03 PM,10:03 PM,770 CAD,American Airlines,Dubai,London
+7:26 PM,6:26 AM,416 CAD,Air Canada,Dubai,London
+9:27 PM,8:27 AM,454 CAD,Emirates,Dubai,London
+7:31 AM,9:31 AM,477 CAD,Air India,Dubai,London
+5:53 PM,7:53 PM,1281 CAD,American Airlines,Dubai,London
+8:26 PM,5:26 AM,435 CAD,United Airlines,Dubai,London
+12:30 PM,5:30 PM,1422 CAD,Lufthansa,Dubai,London
+9:38 AM,2:38 PM,1459 CAD,British Airways,Dubai,London
+6:05 PM,7:05 PM,1409 CAD,Delta Airlines,Dubai,London
+6:22 PM,11:22 PM,1099 CAD,Qatar Airways,Dubai,London
+1:33 PM,6:33 PM,1111 CAD,Qatar Airways,Dubai,London
+4:03 PM,9:03 PM,460 CAD,Delta Airlines,Dubai,London
+11:27 AM,4:27 PM,808 CAD,Air Canada,Dubai,London
+10:59 PM,5:59 AM,553 CAD,British Airways,Dubai,London
+5:00 AM,1:00 PM,900 CAD,Emirates,Dubai,London
+12:36 PM,6:36 PM,801 CAD,Air Canada,Dubai,London
+4:13 PM,2:13 AM,535 CAD,American Airlines,Dubai,London
+3:43 PM,9:43 PM,1449 CAD,Air India,Dubai,London
+10:17 PM,10:17 AM,423 CAD,British Airways,Dubai,London
+12:56 PM,5:56 PM,667 CAD,Air India,Dubai,London
+11:32 AM,12:32 PM,1475 CAD,Lufthansa,Dubai,London
+8:11 AM,12:11 PM,1205 CAD,British Airways,Dubai,London
+11:28 AM,12:28 PM,279 CAD,Air Canada,Dubai,London
+6:48 PM,1:48 AM,682 CAD,Lufthansa,Dubai,London
+7:37 AM,5:37 PM,397 CAD,United Airlines,Dubai,London
+7:48 PM,8:48 PM,1134 CAD,Air Canada,Dubai,London
+10:40 AM,6:40 PM,1335 CAD,Air India,Dubai,London
+7:11 AM,9:11 AM,337 CAD,Air Canada,Dubai,London
+3:43 PM,2:43 AM,533 CAD,Air India,Dubai,London
+11:08 PM,7:08 AM,1406 CAD,Qatar Airways,Dubai,London
+3:32 PM,3:32 AM,1275 CAD,United Airlines,Dubai,London
+7:43 AM,4:43 PM,275 CAD,Emirates,Dubai,London
+10:59 PM,4:59 AM,874 CAD,British Airways,Dubai,London
+5:18 PM,6:18 PM,851 CAD,Emirates,Dubai,London
+11:50 AM,5:50 PM,1500 CAD,Qatar Airways,Dubai,London
+6:23 PM,12:23 AM,1454 CAD,Emirates,Dubai,London
+9:34 AM,4:34 PM,1308 CAD,Air Canada,Dubai,London
+10:16 PM,12:16 AM,413 CAD,Air India,Dubai,London
+6:23 PM,9:23 PM,874 CAD,Qatar Airways,Dubai,London
+10:37 PM,12:37 AM,1433 CAD,Lufthansa,Toronto,New York
+9:06 PM,7:06 AM,627 CAD,Air Canada,Toronto,Paris
+10:52 PM,10:52 AM,1240 CAD,Qatar Airways,Toronto,Paris
+2:21 PM,11:21 PM,700 CAD,British Airways,Dubai,London
+4:33 PM,7:33 PM,1479 CAD,Emirates,Toronto,London
+6:39 AM,10:39 AM,1341 CAD,Lufthansa,Dubai,New York
