@@ -35,6 +35,10 @@ public class WebScraper {
     private static Map<String, Integer> uniqueWordsMap1 = new HashMap<>();
     private static HashMap<String, Integer> searchFrequencyMap = new HashMap<>();
 
+    static Map<String, Integer> searchFrequency = new HashMap<>();
+
+    public static RedBlackBST<String, Integer> redBlackBstTree = new RedBlackBST<>();
+
     /**
      * Main method to initiate web scraping process.
      *
@@ -46,9 +50,8 @@ public class WebScraper {
 
 
         // Initialize Red-Black BST
-        RedBlackBST<String, Integer> redBlackBstTree = new RedBlackBST<>();
+
         Map<String, String> places = new HashMap<>();
-        Map<String, Integer> searchFrequency = new HashMap<>();
 
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\macon\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
@@ -143,7 +146,7 @@ public class WebScraper {
                         if (places.containsKey(from)) {
                             break; // Valid city entered, exit loop
                         } else {
-                            System.out.println("Did you mean " + redBlackBstTree.autoComplete(from).keySet() + " ?");
+                            System.out.println("Did you mean " + redBlackBstTree.autoComplete(from).keySet() + " ? (word auto completion) ");
                         }
 
 
@@ -160,7 +163,7 @@ public class WebScraper {
                                 System.out.println("Arriving city cannot be the same as departure city. Please enter a different city.");
                             }
                         } else {
-                            System.out.println("Did you mean " + redBlackBstTree.autoComplete(to).keySet() + " ?");
+                            System.out.println("Did you mean " + redBlackBstTree.autoComplete(to).keySet() + "  ? (word auto completion)");
                         }
                     }
 
@@ -311,6 +314,18 @@ public class WebScraper {
 
 
 
+                    parseFile("Contri_Codes/AirCanada_Data (1).csv");
+                    parseFile("Contri_Codes/CheapFlights.csv.csv");
+                    parseFile("Contri_Codes/Expedia (2).csv");
+                    parseFile("Contri_Codes/Momondo_Flighdata.csv");
+                    parseFile("Contri_Codes/NEW_Travelocity (1).csv");
+                    parseFile("Contri_Codes/Updated_Converted_Kayak_Dataset (1).csv");
+
+
+                    // Populate Red-Black BST with unique words and their counts
+                    for (Map.Entry<String, Integer> entry : uniqueWordsMap1.entrySet()) {
+                        redBlackBstTree.put(entry.getKey(), entry.getValue());
+                    }
 
                     SpellChecker spellChecker = new SpellChecker();
                     String spellCheckCSVFilePath="D:\\CheapFlightsScraper\\flight_data.csv";
@@ -339,19 +354,23 @@ public class WebScraper {
                     while (true) {
                         System.out.println("\nPlease Enter Your departure city from the list above:");
                         from = scanner2.nextLine().trim().toLowerCase();
-                        SearchFrequencyTracker.processSearchQuery(from,searchFrequency);
+
 
 
                         if (deparurePlaces().containsKey(from)) {
                             break; // Valid city entered, exit loop
                         } else {
                             if(!redBlackBstTree.autoComplete(from).keySet().isEmpty()){
-                                System.out.println("Did you mean " + redBlackBstTree.autoComplete(from).keySet() + " ?");
+
+                                System.out.println("Did you mean " + redBlackBstTree.autoComplete(from).keySet() + " ? (word auto completion) ");
+                                SearchFrequencyTracker.processSearchQuery(from,searchFrequency);
                             }
                             else{
                                 ArrayList similarWordsArray=SpellChecker.spellCheck(from,null);
 
-                                System.out.println("Did you mean "+similarWordsArray.get(1)+"?");
+                                System.out.println("Did you mean ["+similarWordsArray.get(1)+"] ? (word auto correction) ");
+                                SearchFrequencyTracker.processSearchQuery(from,searchFrequency);
+
                             }                        }
 
 
@@ -384,12 +403,12 @@ public class WebScraper {
                             }
                         } else {
                             if(!redBlackBstTree.autoComplete(to).keySet().isEmpty()){
-                                System.out.println("Did you mean " + redBlackBstTree.autoComplete(to).keySet() + " ?");
+                                System.out.println("Did you mean " + redBlackBstTree.autoComplete(to).keySet() + " ? (word auto completion) ");
                             }
                             else{
                                 ArrayList similarWordsArray=SpellChecker.spellCheck(to,null);
 
-                                System.out.println("Did you mean "+similarWordsArray.get(1)+"?");
+                                System.out.println("Did you mean ["+similarWordsArray.get(1)+"] ? (word auto correction) ");
                             }
 //
 //                                List<String> suggestions = spellChecker.suggestAlternatives(to, 2); // Suggest alternatives //Priyal Thakkar
@@ -432,6 +451,7 @@ public class WebScraper {
 
                     int preference = promptForFlightPreference(scanner);
 
+
                     // Run the appropriate function based on the user's preference
                     switch (preference) {
                         case 1:
@@ -457,6 +477,8 @@ public class WebScraper {
 
 
                     SearchFrequencyTracker.displayTopSearches(searchFrequency,10);
+
+
 
 
 //                    UsingDB(scanner);
@@ -680,15 +702,28 @@ public class WebScraper {
             System.out.println(entry.getKey() + ". " + entry.getValue());
         }
 
+
         scanner.nextLine(); // Clear the buffer
         String input = scanner.nextLine();
         String[] choices = input.split(",");
+
+//        parsePage(pageSource, "vocabulary2.txt");
+
+
+
+        // Populate Red-Black BST with unique words and their counts
+        for (Map.Entry<String, Integer> entry : uniqueWordsMap1.entrySet()) {
+            redBlackBstTree.put(entry.getKey(), entry.getValue());
+        }
 
         for (String choice : choices) {
             try {
                 int option = Integer.parseInt(choice.trim());
                 if (siteOptions.containsKey(option)) {
                     selectedSites.add(siteOptions.get(option));
+                    SearchFrequencyTracker.processSearchQuery(siteOptions.get(option),searchFrequency);
+
+
                 } else {
                     System.out.println("Invalid choice: " + choice);
                 }
@@ -942,6 +977,8 @@ public class WebScraper {
         System.out.println("\nEnter the flight operator name:");
         scanner.nextLine(); // Clear the buffer
         String operator = scanner.nextLine().trim().toLowerCase();
+
+        SearchFrequencyTracker.processSearchQuery(operator,searchFrequency);
 
         // Prompt user for flight preference
         int preference = promptForFlightPreference(scanner);
